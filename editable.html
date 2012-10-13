@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evgeni Tsarovski's jQuery plugins.</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding: 40px 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar  navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">jQuery plugins</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="labelize.html">Labelize</a></li>
+                    <li class="active"><a href="editable.html">Editable</a></li>
+                    <li><a href="rightclick.html">Right-click menu</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+<div id="container" class="container">
+
+    <div class="span12">
+        <div class="row">
+            <div class="span8">
+                <legend>Editable</legend>
+            </div>
+            <div class="span3 offset1" style="margin-top: 10px;">
+              <strong>  <a href="https://github.com/etcoding/jquery.editable" >Get this from GutHub</a></strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <p>
+                    <span>This plugin allows to turn a non-input element (e.g. span, div, etc) into an input field when user clicks on it.</span>
+                </p>
+                <strong>Usage:</strong>
+                    <pre>
+&lt;span id="myText"&gt;This is an example of editable&lt;/span&gt;
+
+&lt;script type="text/javascript"&gt;
+    $(function () {
+        $("#myText").editable({"type":"text", "class":"editableX", "idNameModifier":"_editable", "event":"dblclick"});
+    });
+&lt;/script&gt;
+    </pre>
+
+                <p>
+                    <strong><span id="myText">This is an example of editable</span></strong>
+                </p>
+
+                <p>
+                    Upon double-clicking on span text it will turn into an input field with a value of whatever text the
+                    span has. Blur or hit enter to return back to span and save changes, or hit esc to cancel changes. A
+                    "change" event can also be attached to the original element.
+                </p>
+
+                All parameters are optional. Example above shows default values.
+                <section><code>type</code>: textarea, or one of the types that can be applied to the input field (text,
+                    tel, number, etc).
+                </section>
+                <section><code>class</code>: a class name applied to created input element.</section>
+                <section><code>idNameModifier</code>: created input will have id and name set to source element's id
+                    name with this value appended.
+                </section>
+                <section><code>event</code>: one of the jQuery's event names that will trigger the swap. dblclick and
+                    click make most sense.
+                </section>
+
+
+                <p>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.labelize.1.0.0.js"></script>
+<script type="text/javascript" src="js/jquey.editable.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#myText").editable({"type":"text", "class":"editableX", "idNameModifier":"_editable", "event":"dblclick"});
+    });
+</script>
+</body>
+</html>

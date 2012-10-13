@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Labelize and Editable jQuery plugins.</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding: 40px 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar  navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">jQuery plugins</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active"><a href="labelize.html">Labelize</a></li>
+                    <li><a href="editable.html">Editable</a></li>
+                    <li><a href="rightclick.html">Right-click menu</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+<div id="container" class="container">
+
+    <div class="span12">
+        <div class="row">
+            <div class="span8">
+                <legend>Labelize</legend>
+            </div>
+            <div class="span3 offset1" style="margin-top: 10px;">
+                <strong>  <a href="https://github.com/etcoding/jquery.labelize" >Get this from GutHub</a></strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <p>
+                    <span>This plugin allows to turn an input element into a non-input one (e.g. div, span), and turn it back into input on click.</span>
+                </p>
+                <strong>Usage:</strong>
+                    <pre>
+ &lt;input type="text" id="textInput" value="This is an example of labelize" /&gt;
+
+&lt;script type="text/javascript"&gt;
+    $(function () {
+        $("input").labelize({"element":"div", "class":"labelized",  "event":"dblclick"});
+    });
+&lt;/script&gt;
+    </pre>
+
+                <p>
+                    <strong><input type="text" id="textInput" value="This is an example of labelize."/></strong>
+                </p>
+
+                <p>
+                    Upon double-clicking on span text it will turn back into original input field. Blur or hit enter to
+                    return back to span and save changes, or hit esc to cancel changes.
+                </p>
+
+                All parameters are optional. Example above shows default values.
+                <section><code>element</code>: type of an element that will be created to replace input field.</section>
+                <section><code>class</code>: a class name applied to created element.</section>
+                <section><code>event</code>: one of the jQuery's event names that will trigger the swap. dblclick and
+                    click make most sense.
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.labelize.1.0.0.js"></script>
+<script type="text/javascript" src="js/jquey.editable.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("input").labelize({"element":"div", "class":"labelized", "event":"dblclick"});
+    });
+</script>
+</body>
+</html>
